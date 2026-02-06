@@ -7,7 +7,7 @@ import { useSupabaseBroadcast } from "@/hooks/useSupabaseBroadcast";
 import { useAzureSpeechTranslationHindi } from "@/hooks/useAzureSpeechTranslation";
 
 export default function SenderPage() {
-  const REQUIRED_PIN = process.env.NEXT_PUBLIC_SENDER_PIN || "1234";
+  const REQUIRED_PIN = process.env.NEXT_PUBLIC_SENDER_PIN;
 
   const { pin, setPin, unlocked, unlock, lock, error } =
     usePinGate(REQUIRED_PIN);
